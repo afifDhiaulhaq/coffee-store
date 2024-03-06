@@ -14,9 +14,21 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {{ Request::is('dashboard/posts*') ? 'active' : '' }}" href="#">
+                <a class="nav-link {{ Request::is('dashboard/posts*') ? 'active' : '' }}" href="/dashboard/posts">
                     <span data-feather="file-text"></span>
                     Posts
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {{ Request::is('dashboard/galleries*') ? 'active' : '' }}" href="#">
+                    <span data-feather="image"></span>
+                    Galleries
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {{ Request::is('dashboard/about*') ? 'active' : '' }}" href="#">
+                    <span data-feather="info"></span>
+                    About
                 </a>
             </li>
         </ul>

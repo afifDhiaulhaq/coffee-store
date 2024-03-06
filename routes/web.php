@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DashboardPostController;
 use App\Http\Controllers\GuestController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductController;
@@ -36,3 +37,7 @@ Route::post('/dashboard/products/add', [ProductController::class, 'store']);
 Route::get('/dashboard/products/delete/{product:id}', [ProductController::class, 'delete']);
 Route::get('/dashboard/products/edit/{product:id}', [ProductController::class, 'showData']);
 Route::post('/dashboard/products/update/{product:id}', [ProductController::class, 'update']);
+// post
+Route::get('/dashboard/posts/checkSlug', [DashboardPostController::class, 'checkSlug'])->middleware('role:superadmin,admin');
+Route::post('/dashboard/posts/attachImage', [DashboardPostController::class, 'attachImage'])->middleware('role:superadmin,admin');
+Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('role:superadmin,admin');
