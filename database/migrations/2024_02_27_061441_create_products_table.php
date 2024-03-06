@@ -18,6 +18,7 @@ class CreateProductsTable extends Migration
             $table->string('name');
             $table->text('desc');
             $table->integer('price');
+            $table->integer('status')->default(0);
             $table->string('create_by')->default('user');
             $table->timestamp('create_at');
             $table->string('modified_by')->default('user');

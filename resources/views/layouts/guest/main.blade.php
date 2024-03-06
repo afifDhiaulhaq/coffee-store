@@ -27,6 +27,18 @@
     <link rel="stylesheet" href="/assets/css/animate/animate.min.css">
     <link rel="stylesheet" href="/assets/css/carousel/owl.carousel.css">
     <link rel="stylesheet" href="/dist/pages/guest/css/main.css">
+
+    
+    {{-- owl carousel --}}
+    <link rel="stylesheet" href="/assets/css/carousel/docs.theme.min.css">
+    <link rel="stylesheet" href="/assets/css/carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/css/carousel/owl.theme.default.min.css">
+
+    <script src="/assets/js/carousel/jquery.min.js"></script>
+    <script src="/assets/js/carousel/owl.carousel.js"></script>
+
+
+    
 </head>
 
 <body>
@@ -55,6 +67,11 @@
     <script src="/assets/js/mail-script/mail-script.js"></script>
     <script src="/assets/js/feather/feather.min.js"></script>
     <script src="/dist/pages/guest/js/main.js"></script>
+
+    {{-- <script src="/assets/js/carousel/vendors/highlight.js"></script>
+    <script src="/assets/js/carousel/app.js"></script> --}}
+
+    
 </body>
 
 </html>

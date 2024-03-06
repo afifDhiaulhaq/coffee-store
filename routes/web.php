@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\GuestController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 
@@ -16,9 +18,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('pages.guest.index');
-});
+Route::get('/', [GuestController::class,'index']);
 
 Route::get('/login', [LoginController::class, 'index'])->middleware('guest')->name('login');
 Route::post('/login', [LoginController::class, 'authenticate']);
@@ -30,3 +30,9 @@ Route::get('/register', [RegisterController::class, 'index'])->middleware('guest
 Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('role:superadmin,admin');
+// dashboard menu
+Route::get('/dashboard/products',[ProductController::class,'index'])->middleware('role:superadmin,admin');
+Route::post('/dashboard/products/add', [ProductController::class, 'store']);
+Route::get('/dashboard/products/delete/{product:id}', [ProductController::class, 'delete']);
+Route::get('/dashboard/products/edit/{product:id}', [ProductController::class, 'showData']);
+Route::post('/dashboard/products/update/{product:id}', [ProductController::class, 'update']);

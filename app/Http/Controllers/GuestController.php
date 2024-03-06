@@ -9,7 +9,8 @@ class GuestController extends Controller
 {
     public function index(){
         return view('pages.guest.index',[
-            'products' => Product::all()
+            'products_promo' => Product::where('status','1')->get(),
+            'products_bestseler' => Product::where('status','2')->get()
         ]);
 
     }
