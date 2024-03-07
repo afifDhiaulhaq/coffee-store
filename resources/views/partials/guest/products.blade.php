@@ -9,6 +9,7 @@
             </div>
         </div>
         <div class="row">
+            @if ($products_promo->count())
             <div class="owl-carousel owl-theme">
                 @foreach ($products_promo as $product)
                     <div>
@@ -20,12 +21,17 @@
                                 </p>
                             </div>
                             <p>
-                                {{ $product->desc }}
+                                {{ $product->description }}
                             </p>
                         </div>
                     </div>
                 @endforeach
             </div>
+            @else
+            <div class="col-lg-12 d-flex justify-content-center single-menu">
+                <p>No product yet.</p>
+            </div>
+            @endif
         </div>
         <div class="row">
             <div class="d-flex justify-content-center w-100">
@@ -42,6 +48,7 @@
             </div>
         </div>
         <div class="row">
+            @if ($products_bestseler->count())
             <div class="owl-carousel owl-theme">
                 @foreach ($products_bestseler as $product)
                     <div>
@@ -53,21 +60,23 @@
                                 </p>
                             </div>
                             <p>
-                                {{ $product->desc }}
+                                {{ $product->description }}
                             </p>
                         </div>
                     </div>
                 @endforeach
             </div>
+            @else
+            <div class="col-lg-12 d-flex justify-content-center single-menu">
+                <p>No product yet.</p>
+            </div>
+            @endif
         </div>
         <div class="row">
             <div class="d-flex justify-content-center w-100">
                 <button type="button" class="btn btn-primary">See More...</button>
             </div>
         </div>
-
-        
-        
     </div>
 </section>
 
@@ -81,7 +90,7 @@
                 items:1
             },
             600:{
-                items:1
+                items:2
             },
             1000:{
                 items:3
