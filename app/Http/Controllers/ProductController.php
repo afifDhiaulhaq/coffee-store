@@ -8,7 +8,8 @@ use App\Models\product;
 class ProductController extends Controller
 {
     public function index(){
-        return view('pages.dashboard.product',[
+        // dd("hadir");
+        return view('pages.dashboard.products.index',[
             'products' => Product::all(),
             'action' => 'create'
         ]);

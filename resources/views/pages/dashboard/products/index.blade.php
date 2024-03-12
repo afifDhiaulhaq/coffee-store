@@ -1,6 +1,6 @@
 @extends("layouts.dashboard.main")
 
-@section("container")
+@section("section")
 
 <div class="container">
     <h1>Product</h1>

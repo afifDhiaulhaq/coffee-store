@@ -25,14 +25,13 @@
     <link rel="stylesheet" href="/assets/css/magnific-popup/magnific-popup.css">
     <link rel="stylesheet" href="/assets/css/nice-select/nice-select.css">
     <link rel="stylesheet" href="/assets/css/animate/animate.min.css">
-    <link rel="stylesheet" href="/assets/css/carousel/owl.carousel.css">
+    {{-- <link rel="stylesheet" href="/assets/css/carousel/owl.carousel.css"> --}}
     <link rel="stylesheet" href="/dist/pages/guest/css/main.css">
 
     
     {{-- owl carousel --}}
-    <link rel="stylesheet" href="/assets/css/carousel/docs.theme.min.css">
     <link rel="stylesheet" href="/assets/css/carousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="/assets/css/carousel/owl.theme.default.min.css">
+    {{-- <link rel="stylesheet" href="/assets/css/carousel/owl.theme.default.min.css"> --}}
 
     <script src="/assets/js/carousel/jquery.min.js"></script>
     <script src="/assets/js/carousel/owl.carousel.js"></script>
